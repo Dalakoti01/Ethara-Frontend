@@ -140,7 +140,9 @@ const Navbar = ({
         {/* RIGHT */}
         <div className="flex items-center gap-4">
           {/* CREATE TASK */}
-          <button
+          {
+            user.role="Admin" &&(
+<button
             onClick={() =>
               setShowTaskDialog(
                 true
@@ -152,6 +154,9 @@ const Navbar = ({
 
             Create Task
           </button>
+            )
+          }
+          
 
           {/* PROFILE */}
           <div className="flex items-center gap-3 bg-slate-900 border border-slate-800 rounded-2xl px-3 py-2 cursor-pointer hover:border-indigo-500 transition-all duration-300">
