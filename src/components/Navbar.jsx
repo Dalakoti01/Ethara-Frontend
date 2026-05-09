@@ -21,7 +21,7 @@ const Navbar = ({
 }) => {
   useGetAllMembers();
 
-  const { allUsers } =
+  const { allUsers,user } =
     useSelector(
       (store) => store.auth
     );
